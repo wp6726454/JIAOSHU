@@ -1,0 +1,20 @@
+<launch>
+ <node pkg="navigation" 
+ name="lmu" 
+  type="lmu_pub.py" 
+  output="screen">
+  </node>
+
+  <node pkg="controllor" 
+  name="pwmbuilder" 
+  type="thrust_control.py" 
+  output="screen">
+  </node>
+
+  <node pkg="navigation"
+  name="atmosphere"
+  type="airstation.py"
+  output="screen">
+  </node>
+
+</launch>
